@@ -260,6 +260,11 @@ on boot
     mkdir /data/vendor/sensors
     chown system system /data/vendor/sensors
 
+    # Measured FPS
+    chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
+    chmod 0666 /sys/class/drm/sde-crtc-0/measured_fps
+
+
 # MSM specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/diag 2771 root log
